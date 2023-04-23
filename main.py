@@ -1,9 +1,13 @@
 import os
 
 curr_path = os.getcwd()
+initial_text = "chat gpt, saiba que\n"
+final_text = "me escreva o código que faça \n"
 
 
 def main():
+
+    prompt = input("Digite o prompt: ")
     files_info_text = ""
     for dirpath, dirnames, filenames in os.walk(curr_path):
         for filename in filenames:
@@ -15,11 +19,16 @@ def main():
 ```python
 O arquivo {file_path} contém:
 
-{conteudo}```
+{conteudo}
+```
 
 """
                     print(curr_text)
                     files_info_text += curr_text
 
-    with open("super.txt", "w") as f:
-        f.write(files_info_text)
+    complete_text = initial_text + files_info_text + final_text + prompt
+    with open("test.txt", "w") as arquivo:
+        arquivo.write(complete_text)
+
+
+main()
