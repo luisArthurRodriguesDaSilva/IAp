@@ -1,9 +1,8 @@
-import os
 import openai
 from . import scrapeMe as sc
-from .helpers import getText
+from .helpers import getText, getToken
 
-openai_key = getText(os.path.join(os.getcwd(), "api_key.txt"))
+openai_key = getToken()
 openai.api_key = openai_key
 
 
