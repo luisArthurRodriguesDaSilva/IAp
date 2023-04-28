@@ -15,7 +15,7 @@ def getText(file):
         with open(file, "r") as arquivo:
             return arquivo.read()
     except Exception:
-        with open(file, "w+") as arquivo:
+        with open(file, "w") as arquivo:
             arquivo.write("")
         return getText(file)
 

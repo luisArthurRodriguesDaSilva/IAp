@@ -23,6 +23,7 @@ setuptools.setup(
     entry_points={
         "console_scripts": [
             "iap=iap.main:main",
+            "setToken=iap.helpers:setToken"
         ],
     },
 )
