@@ -3,6 +3,7 @@ from . import scrapeMe as sc
 from .helpers import getText, getToken
 
 openai_key = getToken()
+print(openai_key)
 openai.api_key = openai_key
 
 

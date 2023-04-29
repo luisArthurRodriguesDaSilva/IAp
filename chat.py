@@ -9,20 +9,20 @@ setuptools.setup(
     version="0.1",
     author="Luis Arthur Rodrigues da Silva",
     author_email="luisarthurlards03@gmail.com",
-    description="Um pacote que integra o OpenAI GPT ao seu computados",
+    description="Um pacote que integra o OpenAI GPT ao seu computador",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/seu-usuario/meu-pacote",
-    packages=['iap'],
+    packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    python_requires='>=3.8',
     install_requires=[
         "openai",
     ],
-    python_requires='>=3.8',
     entry_points={
         "console_scripts": [
             "iap=iap.main:main",
