@@ -9,6 +9,12 @@ def save_on(path, data):
 def getPyCode(text):
     return text.split("```python")[1].split("```")[0]
 
+def getCode(text):
+    start = text.find("```")
+    end = text.rfind("```", start + 3)
+    code_block = text[start:end]
+    without_firsth_line = "\n".join(code_block.split("\n")[1:])
+    return without_firsth_line
 
 def getText(file):
     try:
@@ -33,3 +39,5 @@ def setToken():
     token = input("token: ")
     save_on(token_path, token)
     return token
+
+#save_on('chat.py',getCode(getText('chat.txt'))) tests
