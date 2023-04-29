@@ -2,15 +2,15 @@ import openai
 from . import scrapeMe as sc
 from .helpers import getText, getToken
 
-openai_key = getToken()
-print(openai_key)
-openai.api_key = openai_key
 
 
 final_text = "baseado nisso,"
 
 
 def send_to_chatGPT(message):
+
+    openai_key = getToken()
+    openai.api_key = openai_key
 
     messages = sc.scrap_sistem()
     messages.append(
