@@ -1,55 +1,38 @@
-Claro, posso ajudá-lo a refatorar o código no arquivo `/home/luis/Área de Trabalho/repositorios/IAp/iap/helpers.py` para torná-lo mais eficiente. 
+# IAp
 
-Uma possível refatoração seria utilizar o recurso de context manager para evitar a necessidade de abrir e fechar arquivos manualmente, simplificando o código e tornando-o mais legível. O arquivo também poderia ser organizado com as funções relacionadas próximas uma da outra em termos de lógica. 
+O pacote iap é uma ferramenta para integrar o OpenAI GPT ao seu computador, permitindo que você faça consultas e obtenha respostas assertivas em texto.
 
-Além disso, a função `getText` poderia ser simplificada utilizando a cláusula try-except. Caso o arquivo não exista, a função retornará uma string vazia. 
+# Instalação
 
-Segue abaixo um exemplo de possível versão refatorada do arquivo `/home/luis/Área de Trabalho/repositorios/IAp/iap/helpers.py`:
-
+Para instalar o pacote, utilize o `pip`:
 
 ```
-import os
-
-global_path = "/".join(os.getcwd().split("/")[:3])
-token_path = os.path.join(global_path, "iap_token.txt")
-
-
-def save_on(path, data):
-    with open(path, "w") as arquivo:
-        arquivo.write(data)
-
-
-def get_py_code(text):
-    return text.split("```python")[1].split("```")[0]
-
-
-def get_code(text):
-    start = text.find("```")
-    end = text.find("```", start + 3)
-    code_block = text[start:end]
-    without_firsth_line = "\n".join(code_block.split("\n")[1:])
-    return without_firsth_line
-
-
-def get_text(file):
-    try:
-        with open(file, "r") as arquivo:
-            return arquivo.read()
-    except FileNotFoundError:
-        return ""
-
-
-def get_token():
-    return get_text(token_path)
-
-
-def set_token():
-    token = input("token: ")
-    save_on(token_path, token)
-    return token
-
-
-save_on("chat1.txt", get_code(get_text("chat.txt")))
+pip install iap
 ```
 
-Espero que isso ajude!
+# Configurando a API Key
+
+Antes de utilizar o pacote, é preciso obter uma API Key na [OpenAI](https://beta.openai.com/), e configurar a variável de ambiente `OPENAI_API_KEY` com o valor da sua chave.
+
+Também é possível armazenar a API Key em um arquivo de texto chamado `iap_token.txt`, que deve ser colocado em um nível acima do diretório que contém o código fonte do projeto.
+
+# Utilização
+
+Para utilizar o pacote, basta chamar o script principal `iap` e inserir o prompt no formato de uma pergunta. Por exemplo:
+
+```
+iap "Qual é a capital do Brasil?"
+```
+
+O programa então enviará a pergunta para o OpenAI GPT, e retornará a resposta gerada. O conteúdo da resposta será salvo em um arquivo chamado `chat.txt`. Além disso, o código gerado pela resposta será salvo em um arquivo especificado pelo usuário no segundo parâmetro. Se nenhum segundo parâmetro for fornecido, o arquivo padrão será `chat.py`.
+
+Para facilitar a utilização do pacote, é possível também criar scripts para automatizar perguntas e aquisições de respostas, e ainda utilizá-las ao longo de outros programas.
+
+## Scripts de ajuda
+
+O pacote também fornece dois scripts de ajuda para gerenciamento do arquivo `iap_token.txt`:
+
+* `setToken`: configura a API Key no arquivo `iap_token.txt`.
+* `getToken`: retorna o conteúdo do arquivo `iap_token.txt`, que deve conter a API Key.
+
+Ambos os scripts podem ser chamados diretamente pelo terminal pelo seu nome.
