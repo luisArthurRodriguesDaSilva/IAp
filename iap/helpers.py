@@ -1,5 +1,10 @@
 import os
+import sys
 
+def getArg(n, defaultValue=''):
+    if len(sys.argv) > n:
+        return sys.argv[n]
+    return defaultValue
 
 def save_on(path, data):
     with open(path, "w") as arquivo:
