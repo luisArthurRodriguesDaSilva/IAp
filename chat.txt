@@ -1,38 +1,59 @@
-# IAp
+# Documentação da API IAp
 
-O pacote iap é uma ferramenta para integrar o OpenAI GPT ao seu computador, permitindo que você faça consultas e obtenha respostas assertivas em texto.
+A API IAp é um projeto que integra a plataforma OpenAI GPT-3 a um ambiente local do usuário.
 
-# Instalação
+## Instalação
 
-Para instalar o pacote, utilize o `pip`:
-
-```
-pip install iap
-```
-
-# Configurando a API Key
-
-Antes de utilizar o pacote, é preciso obter uma API Key na [OpenAI](https://beta.openai.com/), e configurar a variável de ambiente `OPENAI_API_KEY` com o valor da sua chave.
-
-Também é possível armazenar a API Key em um arquivo de texto chamado `iap_token.txt`, que deve ser colocado em um nível acima do diretório que contém o código fonte do projeto.
-
-# Utilização
-
-Para utilizar o pacote, basta chamar o script principal `iap` e inserir o prompt no formato de uma pergunta. Por exemplo:
-
-```
-iap "Qual é a capital do Brasil?"
+O pacote pode ser instalado via pip, utilizando o seguinte comando:
+```bash
+pip install git+https://github.com/luiarthur/auto-iap-enviroment.git
 ```
 
-O programa então enviará a pergunta para o OpenAI GPT, e retornará a resposta gerada. O conteúdo da resposta será salvo em um arquivo chamado `chat.txt`. Além disso, o código gerado pela resposta será salvo em um arquivo especificado pelo usuário no segundo parâmetro. Se nenhum segundo parâmetro for fornecido, o arquivo padrão será `chat.py`.
+## Como utilizar
 
-Para facilitar a utilização do pacote, é possível também criar scripts para automatizar perguntas e aquisições de respostas, e ainda utilizá-las ao longo de outros programas.
+Para utilizar a API, digite o seguinte comando no terminal:
+```bash
+iap [CAMINHO_ARQUIVO.py]
+```
+Onde `[CAMINHO_ARQUIVO.py]` é um caminho absoluto para o arquivo em que você deseja salvar a resposta gerada pelo GPT-3.
 
-## Scripts de ajuda
+Após a execução do comando, você deverá digitar o prompt que deseja enviar para o GPT-3. Ele irá gerar uma resposta, que será salva no arquivo especificado anteriormente.
 
-O pacote também fornece dois scripts de ajuda para gerenciamento do arquivo `iap_token.txt`:
+Alguns comandos adicionais são disponíveis:
 
-* `setToken`: configura a API Key no arquivo `iap_token.txt`.
-* `getToken`: retorna o conteúdo do arquivo `iap_token.txt`, que deve conter a API Key.
+- `iap setToken`: define o token de acesso ao OpenAI. Este comando deve ser executado antes da utilização da API.
 
-Ambos os scripts podem ser chamados diretamente pelo terminal pelo seu nome.
+## Exemplo de utilização
+
+```bash
+iap /home/luis/exemplo.py
+```
+
+## Fluxo de funcionamento
+
+O fluxo de funcionamento da API é mostrado abaixo:
+
+![Fluxo de funcionamento](https://i.imgur.com/5a51cIu.png)
+
+O usuário digita um prompt no terminal e a API envia este prompt para o GPT-3. O GPT-3 gera uma resposta, que é enviada de volta para a API e salva no arquivo especificado pelo usuário.
+
+## Dependências
+
+- openai (1.10.0)
+- setuptools (57.4.0)
+
+## Limitações conhecidas
+
+A API consegue enviar cerca de 50 prompts por dia, devido às restrições do OpenAI GPT-3. Além disso, o token de acesso ao OpenAI deve ser gerado pelo próprio usuário.
+
+## Desenvolvimento
+
+O projeto pode ser encontrado em [https://github.com/luiarthur/auto-iap-enviroment](https://github.com/luiarthur/auto-iap-enviroment). Qualquer sugestão ou contribuição é bem-vinda! 
+
+## Autor
+
+Luis Arthur Rodrigues da Silva
+
+## Licença
+
+Este projeto segue os termos de licença do [MIT License](https://opensource.org/licenses/MIT).
