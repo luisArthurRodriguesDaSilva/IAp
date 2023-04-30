@@ -12,7 +12,7 @@ def scrap_sistem():
     files_info_text = ""
     for dirpath, dirnames, filenames in os.walk(curr_path):
         for filename in filenames:
-            if filename.endswith(f".{extension}") or filename.endswith(getArg(2,'breakit')):
+            if  filename.endswith(getArg(2,filename.endswith(f".{extension}"))):
                 file_path = os.path.join(dirpath, filename)
                 try:
                     with open(file_path, "r") as arquivo:

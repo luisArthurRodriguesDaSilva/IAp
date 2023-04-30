@@ -6,7 +6,7 @@ A API IAp é um projeto que integra a plataforma OpenAI GPT-3 a um ambiente loca
 
 O pacote pode ser instalado via pip, utilizando o seguinte comando:
 ```bash
-pip install git+https://github.com/luiarthur/auto-iap-enviroment.git
+pip install auto-iap-enviromentk
 ```
 
 ## Como utilizar
