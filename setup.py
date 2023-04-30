@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="iap",
-    version="0.1",
+    name="auto-iap-enviroment",
+    version="0.1.1",
     author="Luis Arthur Rodrigues da Silva",
     author_email="luisarthurlards03@gmail.com",
     description="Um pacote que integra o OpenAI GPT ao seu computados",
