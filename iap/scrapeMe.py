@@ -11,13 +11,15 @@ def scrap_sistem():
     for dirpath, dirnames, filenames in os.walk(curr_path):
         for filename in filenames:
             if  filename.endswith(getArg(2,f".{extension}")):
+                path_name= f"{'/'.join(dirpath.split('/')[-2:])}/{filename}"
+                print(path_name, 'lido')
                 file_path = os.path.join(dirpath, filename)
                 try:
                     with open(file_path, "r") as arquivo:
                         conteudo = arquivo.read()
                         curr_text = f"""
 ```python
-O arquivo {file_path} contém:
+O arquivo {path_name} contém:
 
 {conteudo}
 ```
