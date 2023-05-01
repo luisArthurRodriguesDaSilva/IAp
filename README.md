@@ -56,7 +56,7 @@ O usuário digita um prompt no terminal e o IAp envia, junto com as informaçõe
 
 ## Desenvolvimento
 
-O projeto pode ser encontrado em [https://github.com/luiarthur/auto-iap-enviroment](https://github.com/luiarthur/auto-iap-enviroment). Qualquer sugestão ou contribuição é bem-vinda! 
+O projeto pode ser encontrado em [https://github.com/luisArthurRodriguesDaSilva/IAp/tree/main](https://github.com/luisArthurRodriguesDaSilva/IAp/tree/main). Qualquer sugestão ou contribuição é bem-vinda! 
 
 ## Autor
 
