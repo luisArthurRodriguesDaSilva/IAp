@@ -11,7 +11,7 @@ pip install auto-iap-enviroment
 
 ## Como utilizar
 
-Para utilizar a API, digite o seguinte comando no terminal:
+Para utilizar o IAp, digite o seguinte comando no terminal:
 ```bash
 iap [CAMINHO_ARQUIVO.py] [EXTENÇÃO_MONITORADA]
 ```
