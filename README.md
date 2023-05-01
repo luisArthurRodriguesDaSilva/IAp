@@ -57,11 +57,3 @@ O usuário digita um prompt no terminal e o IAp envia, junto com as informaçõe
 ## Desenvolvimento
 
 O projeto pode ser encontrado em [https://github.com/luisArthurRodriguesDaSilva/IAp/tree/main](https://github.com/luisArthurRodriguesDaSilva/IAp/tree/main). Qualquer sugestão ou contribuição é bem-vinda! 
-
-## Autor
-
-Luis Arthur Rodrigues da Silva
-
-## Licença
-
-Este projeto segue os termos de licença do [MIT License](https://opensource.org/licenses/MIT).
