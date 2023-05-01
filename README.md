@@ -41,11 +41,11 @@ lendo todos os .js e escrevendo o código em exemplo.py
 iap exemplo_dois.py js
 ```
 
-## Fluxo de funcionamento
+## Video do funcionamento
 
-O fluxo de funcionamento da API é mostrado abaixo:
+https://user-images.githubusercontent.com/66787949/235394544-02f41fd5-d7d2-4cba-bf2c-5ab26a9fdfed.mp4
 
-![Fluxo de funcionamento](https://i.imgur.com/5a51cIu.png)
+
 
 O usuário digita um prompt no terminal e a API envia este prompt para o GPT-3. O GPT-3 gera uma resposta, que é enviada de volta para a API e salva no arquivo especificado pelo usuário.
 
