@@ -47,7 +47,7 @@ https://user-images.githubusercontent.com/66787949/235394544-02f41fd5-d7d2-4cba-
 
 
 
-O usuário digita um prompt no terminal e a API envia este prompt para o GPT-3. O GPT-3 gera uma resposta, que é enviada de volta para a API e salva no arquivo especificado pelo usuário.
+O usuário digita um prompt no terminal e o IAp envia, junto com as informações dos arquivos, esse prompt para o GPT-3. O GPT-3 gera uma resposta, que é enviada de volta para o IAp, que salva no arquivo especificado pelo usuário.
 
 ## Dependências
 
