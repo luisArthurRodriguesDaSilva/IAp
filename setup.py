@@ -12,7 +12,7 @@ setuptools.setup(
     description="Um pacote que integra o OpenAI GPT ao seu computados",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/seu-usuario/meu-pacote",
+    url="https://github.com/luisArthurRodriguesDaSilva/IAp/tree/main",
     packages=['iap'],
     classifiers=[
         "Programming Language :: Python :: 3",
