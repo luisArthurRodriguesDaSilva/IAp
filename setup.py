@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="auto-iap-enviroment",
-    version="0.1.1",
+    version="0.1.3",
     author="Luis Arthur Rodrigues da Silva",
     author_email="luisarthurlards03@gmail.com",
     description="Um pacote que integra o OpenAI GPT ao seu computados",
