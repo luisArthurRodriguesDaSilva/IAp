@@ -6,15 +6,14 @@ initial_text = "chat gpt, saiba que:\n"
 flags = getFlagsDict()
 print('flags',flags)
 def scrap_sistem():
-    extension = getArg(1,'a.py').split('.')[-1]
+    extensions = flags['extensions']
     messages = [{"role": "system", "content": initial_text}]
     files_info_text = ""
     for dir in flags['dirs']:
         print('dir',dir)
         for dirpath, dirnames, filenames in os.walk(os.path.join(curr_path, dir)):
             for filename in filenames:
-                if  filename.endswith(getArg(2,f".{extension}")):
-
+                if (f".{filename.split('.')[-1]}" in extensions):
                     path_name:str = f"{dirpath}{filename}"
                     path_name = path_name.split(curr_path)[1]
                     
